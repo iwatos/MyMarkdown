@@ -12,6 +12,18 @@
       <strong>We're sorry but mymarkdown doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAYHzZ87yW01p9z3baWNFLafYa5hmlQxJA",
+        authDomain: "mymarkdown-64db6.firebaseapp.com",
+        databaseURL: "https://mymarkdown-64db6.firebaseio.com",
+        projectId: "mymarkdown-64db6",
+        storageBucket: "mymarkdown-64db6.appspot.com",
+        messagingSenderId: "348488800854"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 </html>
