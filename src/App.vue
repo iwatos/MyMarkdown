@@ -1,12 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Home v-if="!isLogin"></Home>
+    <Editor v-else></Editor>
   </div>
 </template>
+
+<script>
+import Home from "./components/Home.vue"
+import Editor from "./components/Editor.vue"
+
+export default {
+  name: "app",
+  data () {
+    return {
+      isLogin: false
+    }
+  },
+  components: {
+    Home: Home,
+    Editor: Editor
+  }
+}
+</script>
 
 <style>
 #app {
