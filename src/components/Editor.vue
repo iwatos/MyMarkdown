@@ -1,20 +1,40 @@
 <template>
   <div id="editor">
     <h1>エディター画面</h1>
+    <span>{{ user.displayName }}</span>
+    <button @click="logout">ログアウト</button>
+    <div class="editorWrapper">
+      <textarea class="markdown" v-model="markdown"></textarea>
+      <div class="preview" v-html="preview()"></div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'editor',
+  props: ["user"], 
   data () {
-    return {}
-  }
+    return {
+      markdown: ""
+    }
+  },
+  methods: {
+    logout: function() {
+      firebase.auth().signOut()
+    },
+    preview: function () {
+      return marked(this.markdown)
+    }
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+
+
+
 h3 {
   margin: 40px 0 0;
 }
