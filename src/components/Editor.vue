@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import marked from "marked"
 export default {
   name: 'editor',
   props: ["user"], 
@@ -32,21 +33,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-
-
-
-h3 {
-  margin: 40px 0 0;
+.editorWrapper {
+  display: flex;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.markdown {
+  width: 50%;
+  height: 500px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.preview {
+  width: 50%;
+  text-align: left;
 }
 </style>
