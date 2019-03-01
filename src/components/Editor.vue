@@ -1,5 +1,6 @@
 <template>
   <div class="editor">
+    <p class="titleLogo">MyMarkdown</p>
     <h1>エディター画面</h1>
     <span>{{ user.displayName }}</span>
     <button @click="logout">ログアウト</button>

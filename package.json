@@ -10,6 +10,8 @@
   "dependencies": {
     "acorn": "^6.1.1",
     "firebase-tools": "^6.4.0",
+    "github-markdown-css": "^3.0.1",
+    "shitajicss": "^5.0.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

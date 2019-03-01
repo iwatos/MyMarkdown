@@ -1,7 +1,10 @@
 <template>
   <div id="home">
+    <p class="titleLogo">MyMarkdown</p>
     <h1>{{ msg }}</h1>
     <button @click="googleLogin">Googleアカウントでログイン</button>
+    <p>ブラウザでマークダウン形式の文章が作成・保存できます。</p>
+    <p>Gooleアカウントですぐにログインできます。</p>
   </div>
 </template>
 
